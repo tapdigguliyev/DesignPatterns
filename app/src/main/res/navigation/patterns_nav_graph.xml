@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/patterns_navigation"
+    app:startDestination="@id/patternTypesFragment">
+
+    <fragment
+        android:id="@+id/patternTypesFragment"
+        android:name="com.example.designpatterns.feature.feature1.view.fragments.PatternProvidersFragment"
+        android:label="fragment_pattern_types"
+        tools:layout="@layout/fragment_pattern_providers" >
+        <action
+            android:id="@+id/action_patternTypesFragment_to_patternsFragment"
+            app:destination="@id/patternsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patternsFragment"
+        android:name="com.example.designpatterns.feature.feature1.view.fragments.PatternsFragment"
+        android:label="fragment_patterns"
+        tools:layout="@layout/fragment_patterns" >
+        <action
+            android:id="@+id/action_patternsFragment_to_patternDetailsFragment"
+            app:destination="@id/patternDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patternDetailsFragment"
+        android:name="com.example.designpatterns.feature.feature1.view.fragments.PatternDetailsFragment"
+        android:label="fragment_pattern_details"
+        tools:layout="@layout/fragment_pattern_details" />
+</navigation>
